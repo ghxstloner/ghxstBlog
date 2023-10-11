@@ -1,0 +1,24 @@
+{
+  "site": {
+    "title": "ghxstBlog ",
+    "base_url": "https://ghxstblog.netlify.app/",
+    "base_path": "/",
+    "favicon": "/favicon.png",
+    "logo": "/favicons/favicon.png",
+    "lang": "es",
+    "description": "Desarrollador Backend. Autodidácta desde muy temprana edad. Apasionado por el lenguaje de programación Java. #SpringBoot #Angular - ᴠᴇɴ ᴄᴏ",
+    "pageSize": 6
+  },
+  "features": {
+    "youtube": false
+  },
+  "metadata": {
+    "meta_author": "Yoiner Moreno @ghxstloner",
+    "meta_description": "Desarrollador Backend. Autodidácta desde muy temprana edad. Apasionado por el lenguaje de programación Java. #SpringBoot #Angular - ᴠᴇɴ ᴄᴏ"
+  },
+  "author": {
+    "name": "Yoiner Moreno @ghxstloner",
+    "avatar": "/favicons/me.jpeg",
+    "bio": "Desarrollador Backend. Autodidácta desde muy temprana edad. Apasionado por el lenguaje de programación Java. #SpringBoot #Angular - ᴠᴇɴ ᴄᴏ"
+  }
+}

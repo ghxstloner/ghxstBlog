@@ -1,0 +1,12 @@
+/* TEAM */
+	Chef: Yoiner Deyhan Moreno Andrade
+	Contact: ghxstblog.netlify.app/ @ghxstloner
+	Twitter: @ghxstloner
+	From: Bogotá, Bogotá D.C., Colombia.
+
+
+/* SITE */
+	Last update: 2023/09/18
+	Language: Spanish
+	Doctype: Astro
+	IDE: VSCode
