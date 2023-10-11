@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-    .prose code {
+  .prose code {
     @apply text-base;
   }
   h1,
@@ -16,6 +16,9 @@
   }
   p {
     @apply text-zinc-700 dark:text-zinc-300;
+  }
+  li {
+    @apply text-zinc-700 dark:text-zinc-200;
   }
 }
 
