@@ -1,10 +1,10 @@
 ---
 title: 'Definición de la codificación en la informática'
-description: ''
+description: 'En este artículo aprenderemos qué es la programación para que tengas una base sólida sobre la cual construir.'
 pubDate: '2023-10-21T06:39:32.971Z'
 heroImage: '/blog-placeholder.jpg'
-categories: ['']
-tags: ['']
+categories: ['Coding']
+tags: ['binary', 'software']
 author: '["ghxstloner"]'
 ---
 

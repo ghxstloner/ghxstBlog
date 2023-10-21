@@ -3,7 +3,7 @@ title: 'Complejidad Algorítmica (Big O)'
 description: 'Big-O es muy buena forma para medir nuestro algoritmo tanto en espacio, tiempo y complejidad. Veámos como funciona.'
 pubDate: '2023-10-11T07:27:10.133Z'
 heroImage: '/notacion-big-o.png'
-categories: ['coding']
+categories: ['Algorithms']
 tags: ['software', 'algorithms']
 author: '["ghxstloner"]'
 ---
