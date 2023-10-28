@@ -18,6 +18,7 @@ module.exports = {
               '&:hover': {
                 color: 'rgb(var(--color-text-link))',
               },
+              color: ' rgb(99 102 241 )', // Agrega esta línea para establecer el color morado
             },
             'h1, h2, h3, h4, h5': {
               color: 'rgb(var(--color-text-heading))',
