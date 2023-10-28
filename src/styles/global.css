@@ -20,6 +20,9 @@
   li {
     @apply text-zinc-700 dark:text-zinc-200;
   }
+  strong {
+    @apply text-zinc-700 dark:text-zinc-200;
+  }
 }
 
 .video-wrapper {
