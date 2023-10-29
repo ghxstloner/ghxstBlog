@@ -38,6 +38,8 @@ Sus pantallas son vibrantes y activas, y haay una variedad de botones e iconos l
 
 ## Relación de las computadoras con electricidad
 
+---
+
 Las computadoras funcionan y se alimentan con la ayuda de la electricidad.
 
 La electricidad solo tiene dos estados: **puede estar encendida o apagada**.
@@ -50,11 +52,19 @@ Los dos estados de la electricidad se llaman estados Binarios, el prefijo bi- si
 
 ## ¿Qué es el Código Binario?
 
+---
+
 Este concepto de cargas eléctricas y la existencia de solo dos posibles estados se relaciona bien con el sistema numérico que las computadoras utilizan en su hardware. Lo usan para completar cada tarea que se les asigna. Se llama código binario y está compuesto por secuencias de *0*s y *1*s.
 
 El código binario, por diseño, se corresponde directamente con instrucciones específicas de la máquina, comandos y ubicaciones en la memoria de la computadora. La computadora luego lee e interpreta estas instrucciones y luego realiza tareas particulares.
 
 Las computadoras están compuestas por miles de pequeños dispositivos físicos que actúan como interruptores eléctricos, llamados **transistores**.
+
+<p align="center">
+  <img width="400" height="300" src="/primer-transistor.jpg" >
+</p>
+
+<p align="center"><em>el primer transistor de la historia <strong>(1950)</strong></em></p>
 
 Estos pequeños componentes de hardware eléctrico, los transistores, habilitan o deshabilitan el flujo de electricidad.
 
@@ -62,6 +72,8 @@ Pueden tener una carga eléctrica positiva o negativa según su estado, es decir
 Esos miles de pequeños interruptores pueden estar encendidos o apagados.
 
 ## ¿Cómo funciona el Sistema Binario?
+
+---
 
 Acabamos de mencionar y también es posible que anteriormente hayas escuchado que **las computadoras trabajan con 0s y 1s**, pero.. ¿qué significa eso realmente? Es posible que ya no trabajemos directamente con el código binario, pero es lo único que la CPU (procesador) de la computadora entiende.
 
@@ -75,11 +87,15 @@ Cuando estas señales elétricas de los circuitos de transistores y otros compon
 
 ## La relación de las computadoras con el ser humano
 
+---
+
 El lenguaje de programación a nivel de máquina es el único lenguaje que las computadoras pueden entender directamente y son capaces de comprender.
 
 El código binario puede variar de una computadora a otra y de una máquina a otra. Cuando se trata de este nivel de programación de una computadora, no hay portabilidad. Esto significa que los programas y el software no se pueden transferir a sistemas diferentes.
 
 ## Limitaciones de los "Lenguajes de máquina"
+
+---
 
 Los lenguajes de máquina pueden variar según el sistema operativo en el que se implementen.
 
@@ -99,6 +115,8 @@ Un ejemplo de esto, es que son buenas para realizar cálculos aritméticos como 
 
 ## El Elemento Humano en la computación
 
+---
+
 Los humanos crearon estas máquinas que han revolucionado nuestra forma de vida, pero cuando se trata de eso, las computadoras realmente no son tan inteligentes y tienen capacidades limitadas por sí mismas.
 
 Solo hacen exactamente lo que se les dice que hagan. No hacen suposiciones ni tienen sentido común como lo hacen los humanos.
@@ -116,6 +134,8 @@ Todo lo que podemos imaginar, ahora podemos crearlo mediante la programación de
 Las computadoras y los programas pueden mejorar nuestras vidas colectivamente en todo el mundo. Pero, ¿cómo hacemos que hagan lo que queremos
 
 ## ¿Qué es la programación de computadoras?
+
+---
 
 La codificación y la programación son términos que se suelen usar indistintamente. Sin embargo, tienen algunas diferencias.
 
@@ -136,6 +156,8 @@ Podemos pensar en la resolución de problemas como tomar una entrada (la informa
 Los salidas pueden ser complicadas, muy complicadas..
 
 ## Resolución de problemas con Algoritmos
+
+---
 
 Cuando estás resolviendo problemas usando una computadora, necesitas expresar la solución a ese problema de acuerdo con el conjunto de instrucciones de la computadora.
 
@@ -159,3 +181,73 @@ En el último ejemplo, podemos pensar en la receta como las instrucciones que us
 Un algoritmo es un plan que presenta los pasos que necesitas seguir para obtener un resultado deseado.
 
 ## La manera en que las computadoras usan los algoritmos
+
+---
+
+Cuando se trata de computadoras, los algoritmos deben ser precisos ya que las computadoras toman todo de manera literal. No leen entre líneas ni hacen suposiciones.
+
+No hay lugar para la ambigüedad, por lo que los algoritmos no solo deben ser precisos sino también organizados, correctos, libres de errores, eficientes y bien diseñados. Todo esto ayuda a minimizar el tiempo y el esfuerzo que la computadora necesita para completar una tarea.
+
+Las computadoras ejecutan algoritmos de manera mecánica sin pensar mucho en cada paso. Y deberían funciuonar exactamente de la manera en que pretendíamos que funcionaran.
+
+Un programa de computadora es una colección de esas instrucciones, o algoritmos, es un archivo de texto que sirve como manual de instrucciones.
+
+Describe una secuencia muy precisa de pasos para que la computadora los siga. La computadora realiza una tarea específica, su disco duro ejecuta las instrucciones y obtienes el resultado esperado (en caso de que no tenga errores semánticos) al final.
+
+Aparte del pensamiento, la investigación, el diseño y la planificación detallada, la programación también implica pruebas, depuración, implementación y mantenimiento del resultado final.
+
+Cuando estás desarrollando un programa para resolver un problema en particular, generalmente expresas la idea de la solución utilizando un algoritmo. Luego, los desarrolladores codifican el programa implementando ese algoritmo. Utilizas un lenguaje que tiene una sintaxis particular y que tanto los humanos como las computadoras pueden entender.
+
+Aquí es donde entra en juego la codificación real.
+
+## ¿Qué es la Codificación de Computadoras? La definición sencilla
+
+---
+
+La codificación es el proceso de transformar ideas, soluciones e instrucciones al lenguaje que la computadora puede entender, es decir, el código binario de máquina.
+
+La codificación es cómo los humanos pueden comunicarse con las computadoras.
+
+La codificación implica comunicarse y dar instrucciones para diferentes acciones que queremos que nuestras computadoraqs realicen usando un lenguaje de programación de computadoras.
+
+Los lenguajes de programación como: JavaScript, Java (mi favorito), C/C++ o Python actúan como el traductor entre humanos y máquinas.
+
+Estos lenguajes reducen la brecha de comunicación entre computadoras y humanos al representar, expresar y poner en práctica algoritmos. Lo hacen utilizando una secuencia específica de declaraciones que las máquinas entienden y pueden seguir.
+
+**Los lenguajes de programación** son similares a los idiomas humanos en el sentido de que están compuestos por elementos sintácticos básicos como sustantivos, verbos y frases. Y agrupas estos elementos para formar algo que se asemeja a una oración y crea significado
+
+La mayoría de los casos son lenguajes que realmente son similares al idioma inglés. Pero ofrecen una forma más corta, precisa y menos prolija de crear instrucciones que la computadora puede entender.
+
+Un idioma hablado/natural como el inglés, por otro lado, deja mucho espacio para la ambigüedad e interpretaciones diferentes de muchas personas.
+
+Los lenguajes de programación son un conjunto de reglas que definen cómo escribir código de computadora.
+
+Usamos código de computadora para crear todas las aplicaciones web, sitios web, juegos, sistemas operativos y todos los demás programas de software y tecnologías que usamos a diario.
+
+Puedes ver el código que compone tus sitios web favoritos haciendo clic derecho y seleccionar "Inspeccionar" (o también Ver código fuente de la página) como se muestra a continuación
+
+<p align="center">
+  <img src="/ver-codigo-fuente.png">
+</p>
+
+Luego de seleccionar cualquiera de las dos opciones podremos ver el código HTML, CSS y JavaScript que conforman el FrontEnd del sitio web que estamos observando, sería similar a esto:
+
+<p align="center">
+  <img src="/codigo-fuente.png">
+</p>
+
+Con todo esto podríamos entender un poco acerca de que el concepto de programar es el acto de traducir problemas que primero están en un lenguaje natural humano a un lenguaje legible por la máquina. Y esa traducción ocurre gracias a los lenguajes de programación y la codificación.
+
+La codificación requiere que entiendas las complejidades, la sintaxis particular y las palabras clave específicas que componen un lenguaje de programación. Una vez que conoces estas características de un lenguaje, puedes comenzar a desarrollar aplicaciones.
+
+# Conclusión
+
+Sí llegaste hasta acá significa que aprendiste cómo funcionan las computadoras a un alto nivel. Luego definimos qué es la programacion, el significado de la codificación y varias diferencias entre ellos.
+
+Es importante recordad que el hecho de **_codificar_** es nada más que un proceso de escribir código para desarrollar programas y aplicaciones. Haciendo uso de una metafora, es lo que son las herramientas para un carpintero.
+
+La codificación es un subconjunto de la programación, que implica el razonamiento lógico, el análisis y la planificación de una secuencia de instrucciones para un programa o aplicación de computadora antes de realizar cualquier codificación.
+
+La programación es el panorama más amplio del proceso. La codificación es parte de ese proceso, pero siempre debe venir después de la programación o de la etapa de planificación y resolución de problemas.
+
+Espero que realmente a través de este artículo hayas podido comprender los conceptos básicos de programación y codificación. ¡Gracias por leer! :D
