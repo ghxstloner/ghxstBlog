@@ -135,8 +135,9 @@ ___
 <a name="video-game"></a>
 ## My Favorite Video Game: League of Legends
 
-![alt text](image-1.png)
-
+<p align="center">
+  <img src="/image-1.png" alt="LoL"/>
+</p>
 As a passionate gamer, my all-time favorite game has to be League of Legends. It's not just a game for me; it's a virtual arena where skills are tested, strategies are formed, and epic battles unfold.
 
 ### Why I Love Playing Yone
@@ -171,7 +172,9 @@ Here's a collection of fun memes related to programming, technology, and student
 
 **And finally This is my favorite :D**
 
-![alt text](image.png)
+<p align="center">
+  <img src="/image.png" alt="Meme"/>
+</p>
 
 ___
 
