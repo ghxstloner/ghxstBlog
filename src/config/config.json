@@ -3,7 +3,8 @@
     "base_url": "https://ghxstblog.netlify.app/",
     "favicon": "/favicon.png",
     "logo": "/favicons/favicon.png",
-    "title": "ghxstBlog"
+    "title": "ghxstBlog",
+    "description": "Backend Developer. Self-taught from an early age. Passionate about Java programming. #SpringBoot #Angular - ᴠᴇɴ ᴄᴏ"
   },
   "es": {
     "site": {
