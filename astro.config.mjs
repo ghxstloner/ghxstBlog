@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import netlify from '@astrojs/netlify';
 import mdx from '@astrojs/mdx';
 import tailwind from '@astrojs/tailwind';
 import Compress from 'astro-compress';
@@ -10,6 +11,7 @@ import { manifest } from './src/utils/manifest';
 export default defineConfig({
   site: 'https://ghxstblog.netlify.app/',
   output: 'hybrid',
+  adapter: netlify({ edge: true }),
   image: {
     remotePatterns: [{ protocol: 'https' }],
   },
@@ -54,5 +56,5 @@ export default defineConfig({
     '@config': './src/config',
     '@layouts': './src/layouts',
     '@components': './src/components',
-  }
+  },
 });
