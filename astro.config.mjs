@@ -9,6 +9,7 @@ import { manifest } from './src/utils/manifest';
 
 export default defineConfig({
   site: 'https://ghxstblog.netlify.app/',
+  output: 'hybrid',
   image: {
     remotePatterns: [{ protocol: 'https' }],
   },
