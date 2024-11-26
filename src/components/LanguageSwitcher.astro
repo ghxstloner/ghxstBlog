@@ -1,0 +1,10 @@
+---
+const currentLang = Astro.url.pathname.startsWith('/es') ? 'es' : 'en';
+const otherLang = currentLang === 'es' ? '/en/' : '/es/';
+---
+
+<nav>
+  <a href={otherLang} class="text-blue-500">
+    {currentLang === 'es' ? 'English' : 'Español'}
+  </a>
+</nav>

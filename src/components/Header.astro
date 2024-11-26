@@ -1,38 +1,57 @@
 ---
+import en from "@config/locales/en.json";
+import es from "@config/locales/es.json";
 import { Image } from "astro:assets";
-import menu from "@config/menu.json";
 import config from "@config/config.json";
 import HamburgerIcon from "@icons/HamburgerIcon.astro";
 import CloseIcon from "@icons/CloseIcon.astro";
 import HomeIcon from "@icons/HomeIcon.astro";
 import ThemeIcon from "@components/ThemeIcon.astro";
+import menuJson from "@config/menu.json";
 
-export interface NavigationLink {
-  name: string;
+type LocaleKeys = 'home' | 'about' | 'coding' | 'categories';
+
+interface NavigationLink {
+  key: LocaleKeys;
   url: string;
 }
 
-const { main }: { main: NavigationLink[] } = menu;
+const menu: { main: NavigationLink[] } = {
+  main: menuJson.main.map((item: any) => ({
+    key: item.key as LocaleKeys,
+    url: item.url,
+  })),
+};
+
+const currentLang = Astro.url.pathname.startsWith('/es') ? 'es' : 'en';
+const locales: { menu: Record<LocaleKeys, string> } = currentLang === 'es' ? es : en;
+
+const localizedMenu = menu.main.map((menuItem) => ({
+  ...menuItem,
+  name: locales.menu[menuItem.key], // Get the translated name
+  url: menuItem.url.startsWith('/en') || menuItem.url.startsWith('/es')
+    ? menuItem.url.replace(/^\/(en|es)/, `/${currentLang}`)
+    : `/${currentLang}${menuItem.url}`,
+}));
 ---
 
 <header class="bg-zinc-50 dark:bg-zinc-900">
   <div class="mx-auto max-w-screen-lg px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
     <div class="flex items-start justify-between gap-2 sm:gap-4 md:items-center">
-      <a href="/" class="logo flex items-center" aria-current="page">
+      <!-- Logo link -->
+      <a href={`/${currentLang}`} class="logo flex items-center" aria-current="page">
         <figure>
-          <Image
+          <img
             src={config.site.logo}
             alt={config.site.title}
             class="mr-8 w-16 rounded"
-            width={512}
-            height={512}
             decoding="async"
             loading="lazy"
           />
         </figure>
       </a>
       <div class="relative flex order-3">
-        <!-- navbar toggler -->
+        <!-- Navbar toggler -->
         <input id="nav-toggle" type="checkbox" class="hidden" />
         <label id="show-button" for="nav-toggle" class="order-2 flex cursor-pointer items-center text-zinc-400 md:hidden">
           <HamburgerIcon />
@@ -40,37 +59,70 @@ const { main }: { main: NavigationLink[] } = menu;
         <label id="hide-button" for="nav-toggle" class="order-2 hidden cursor-pointer items-center text-zinc-400">
           <CloseIcon />
         </label>
-        <!-- /navbar toggler -->
+        <!-- Navbar menu -->
         <div
           id="nav-menu"
           class="absolute right-0 top-8 z-10 mt-2 hidden w-44 divide-y divide-zinc-100 rounded-md border border-zinc-100 bg-white dark:bg-zinc-800 dark:border-zinc-900 p-2 shadow-lg"
         >
           <ul class="py-2 text-sm text-zinc-700 dark:text-zinc-200">
-            {
-              main?.map((menu) => (
-                <li>
-                  <a
-                    href={menu?.url}
-                    class="block rounded-lg px-4 py-2 text-sm text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-200 hover:text-zinc-700 dark:hover:text-zinc-800"
-                  >
-                    {menu?.name}
-                  </a>
-                </li>
-              ))
-            }
+            {localizedMenu.map((menuItem) => (
+              <li>
+                <a
+                  href={menuItem.url}
+                  class="block rounded-lg px-4 py-2 text-sm text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-200 hover:text-zinc-700 dark:hover:text-zinc-800"
+                >
+                  {menuItem.name}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
       <ul class="ml-auto hidden items-center gap-6 md:flex lg:flex">
-        {
-          main?.map((menu) => (
-            <li class="text-md block rounded-lg px-2 py-2 text-zinc-500 dark:text-zinc-400 transition-all hover:text-zinc-800">
-              <a href={menu?.url} class="relative flex items-center">
-                {menu?.name === 'Home' ? <HomeIcon /> : menu?.name}
+        {localizedMenu.map((menuItem) => (
+          <li class="text-md block rounded-lg px-2 py-2 text-zinc-500 dark:text-zinc-400 transition-all hover:text-zinc-800">
+            <a href={menuItem.url} class="relative flex items-center">
+              {menuItem.name === locales.menu.home ? <HomeIcon /> : menuItem.name}
+            </a>
+          </li>
+        ))}
+        <!-- Language switcher dropdown -->
+        <li class="relative group">
+          <button
+            class="flex items-center justify-between rounded-lg px-2 py-2 text-md text-zinc-500 dark:text-zinc-400 transition-all hover:text-zinc-800"
+          >
+            {currentLang === 'es' ? 'Español' : 'English'}
+            <svg
+              class="w-4 h-4 ml-2"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <ul
+            class="absolute left-0 top-full z-20 rounded-lg border border-zinc-100 bg-white dark:bg-zinc-800 dark:border-zinc-900 p-2 shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-opacity duration-200"
+          >
+            <li>
+              <a
+                href="/es"
+                class="block rounded-lg px-4 py-2 text-sm text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-200 hover:text-zinc-700 dark:hover:text-zinc-800"
+              >
+                Español
               </a>
             </li>
-          ))
-        }       
+            <li>
+              <a
+                href="/en"
+                class="block rounded-lg px-4 py-2 text-sm text-zinc-500 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-200 hover:text-zinc-700 dark:hover:text-zinc-800"
+              >
+                English
+              </a>
+            </li>
+          </ul>
+        </li>
       </ul>
       <ThemeIcon />
     </div>

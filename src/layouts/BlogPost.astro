@@ -5,13 +5,19 @@ import FormattedDate from "@components/FormattedDate.astro";
 import CalendarIcon from "@icons/CalendarIcon.astro";
 import CategoryIcon from "@icons/CategoryIcon.astro";
 import { Image } from "astro:assets";
-import config from "@config/config.json";
+import config from "@config/config.json"; // Configuración multilenguaje
 import { slugify } from "@utils/slug";
 
 type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, pubDate, heroImage, categories, tags } =
   Astro.props;
+
+// Detecta el idioma actual basado en el pathname
+const currentLang = Astro.url.pathname.startsWith("/es") ? "es" : "en";
+
+// Obtiene la configuración específica del idioma actual
+const localizedConfig = config[currentLang];
 ---
 
 <Base meta_title={title} description={description} image={heroImage} blogpost>
@@ -39,16 +45,16 @@ const { title, description, pubDate, heroImage, categories, tags } =
         <div class="mx-3 flex items-center flex-wrap font-medium mt-2">
           <figure>
             <Image
-              alt={config.author.name}
+              alt={localizedConfig.author.name}
               class="mr-2 h-6 w-6 rounded-full"
               width={50}
               height={50}
-              src={config.author.avatar}
+              src={localizedConfig.author.avatar}
               decoding="async"
               loading="lazy"
             />
           </figure>
-          <span>{config.author.name}</span>
+          <span>{localizedConfig.author.name}</span> <!-- Usamos localizedConfig -->
         </div>
         <div class="mx-3 flex items-center flex-wrap font-medium mt-2">
           <CalendarIcon />

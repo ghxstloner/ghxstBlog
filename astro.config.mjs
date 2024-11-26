@@ -5,10 +5,8 @@ import Compress from 'astro-compress';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 import { VitePWA } from 'vite-plugin-pwa';
-
 import { manifest } from './src/utils/manifest';
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://ghxstblog.netlify.app/',
   image: {
@@ -34,6 +32,9 @@ export default defineConfig({
     sitemap(),
     tailwind(),
     robotsTxt(),
+    sitemap({
+      customPages: ['/en/', '/es/'],
+    }),
   ],
   vite: {
     plugins: [
@@ -48,4 +49,9 @@ export default defineConfig({
       }),
     ],
   },
+  alias: {
+    '@config': './src/config',
+    '@layouts': './src/layouts',
+    '@components': './src/components',
+  }
 });

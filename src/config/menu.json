@@ -1,20 +1,8 @@
 {
   "main": [
-    {
-      "name": "Home",
-      "url": "/"
-    },
-    {
-      "name": "Acerca",
-      "url": "/about"
-    },
-    {
-      "name": "Coding",
-      "url": "/coding"
-    },
-    {
-      "name": "Categorías",
-      "url": "/categories"
-    }
+    { "key": "home", "url": "/" },
+    { "key": "about", "url": "/about" },
+    { "key": "coding", "url": "/coding" },
+    { "key": "categories", "url": "/categories" }
   ]
 }
